@@ -42,6 +42,13 @@ Child.init(
             allowNull: false,
             unique: true,
         },
+        parent_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'parent',
+                key: 'id',
+            },
+        },
     },
     {
         hooks: {
